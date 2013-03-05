@@ -1,14 +1,14 @@
-and(A, B) :- % logic
+and(A, B) :- A, B.
 
-or(A, B) :- % logic
+or(A, B) :- A, B; \+A, B; A, \+B.
 
-equ(A, B) :- % logic
+equ(A, B) :- A, B; \+A, \+B.
 
-nand(A, B) :- % logic
+nand(A, B) :- \+A; \+B.
 
-nor(A, B) :- % logic
+nor(A, B) :- \+A, \+B.
 
-xor(A, B) :- % logic
+xor(A, B) :- A, \+B; \+A, B.
 
 bind(true).
 bind(false).
